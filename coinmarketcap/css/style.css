@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 580px;
+    height: 320px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    position: relative;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    width: 540px;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid #69c;
+    margin: 20px;
+    cursor: default;
+
+}
+
+table th {
+    font-weight: normal;
+    font-size: 14px;
+    color: #039;
+    border-bottom: 1px dashed #69c;
+    padding: 4px 12px;
+    white-space: nowrap;
+}
+
+table td {
+    color: #669;
+    padding: 4px 12px;
+    white-space: nowrap;
+}
+
+table tbody tr:hover td {
+    color: #339;
+    background: #d0dafd;
+}
+#loading{
+    text-align:center;
+    line-height:320px;
+    font-weight:bold;
+    font-size: 1.2em;
+}
+header{
+    display: none;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    margin-bottom: -18px;
+    font-size: 2em;
+    background-color: white;
+}
+button#side{
+    position: fixed;
+    top:10px;
+    right: 15px;
+    /*border-radius: 2px;*/
+    height: 20px;
+    width: 46px;
+    /*background-color: grey;*/
+}
+div.side{
+    height: 540px;
+    width: 380px;
+    background-color: grey;
+    position: fixed;
+    opacity: 1;
+    top:63px;
+    right: -380px;
+    transition: 1s;
+    /*transform: translateX(280px);*/
+}
+.sideout{
+    transform: translateX(-380px);
+}
+div#marketcap{
+    padding-top: 43px; 
+}
+ul.list>li{
+    height: 27px;
+    line-height: 27px;
+    list-style-type:none;
+    font-size: 1.2em;
+    display: flex;
+}
+ul.list>li span{
+    margin-right: 5px;
+    display: inline-block;
+}
+ul.list>li span.del{
+    width: 50px;
+    text-align: right;
+    padding-top: 4px;
+
+}
+ul.list>li span.del:hover{
+    color:steelblue;
+}
+ul.list>li span.name{
+    width: 65px;
+    text-align: center;
+    overflow: hidden;
+}
+ul.list>li span.price{
+    width: 70px;
+    overflow: hidden;
+    text-align: right;
+}
+ul.list>li span.num{
+    width: 60px;
+    overflow: hidden;
+    text-align: right;
+}
+ul.list>li span.sum{
+    width: 80px;
+    overflow: hidden;
+    text-align: right;
+}

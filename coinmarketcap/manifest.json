@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Coinmarketcap",
+    "version": "1.0",
+    "description": "Cryptocurrency marketcap",
+    "icons": {
+        "16": "images/bitcoin.png",
+        "48": "images/bitcoin.png",
+        "128": "images/bitcoin.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/bitcoin.png",
+            "38": "images/bitcoin.png"
+        },
+        "default_title": "Cryptocurrency marketcap",
+        "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "permissions": [
+        "https://api.coinmarketcap.com/v1/ticker/?limit=100",
+        "https://use.fontawesome.com"
+    ]
+}
