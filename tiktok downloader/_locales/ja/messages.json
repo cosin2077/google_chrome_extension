@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Tiktokダウンローダー",
+    "description": "TikTokダウンローダー、お気に入りの動画を閲覧してダウンロードします。"
+  },
+  "appDesc": {
+    "message": "Tiktokダウンローダー、Tiktokからビデオを閲覧してダウンロードするのに役立ちます！", 
+    "description":"TikTokダウンローダー、お気に入りの動画を閲覧してダウンロードします。"
+  }
+}

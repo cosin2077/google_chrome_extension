@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Bạn nhận được một trình tải xuống",
+    "description": "TikTok Downloader, duyệt và tải xuống video yêu thích của bạn"
+  },
+  "appDesc": {
+    "message": "Trình tải xuống Tiktok, giúp bạn duyệt và tải video từ Tiktok!", 
+    "description":"Trình tải xuống TikTok, duyệt và tải xuống các video yêu thích của bạn."
+  }
+}
