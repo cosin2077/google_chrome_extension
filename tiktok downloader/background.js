@@ -9,3 +9,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 			break;
 	}
 });
+
+const uiLanguage = chrome.i18n.getUILanguage();
+
+console.log(uiLanguage);
