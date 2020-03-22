@@ -11,9 +11,19 @@ var videoSrcs = [...document.querySelectorAll('.video-card.default video')] || [
 videoSrcs = videoSrcs.map(video=>video.src);
 allList = [...allList,...videoSrcs];
 allList = [...new Set(allList)];
-chrome.runtime.sendMessage(allList, function(response) {
+let nextData = '';
+if(window.__NEXT_DATA__ && window.__NEXT_DATA__.innerText){
+    try{
+        nextData = JSON.parse(window.__NEXT_DATA__.innerText)
+    }catch(err){
+        nextData = null
+    }
+}
+chrome.runtime.sendMessage({
+    allList,nextData
+}, function(response) {
     if(chrome.runtime.lastError){}
-  });
+});
 
 if(videoCard.length == prevList.length && prevList.length != 0) return;
 prevList = videoCard;
@@ -41,14 +51,6 @@ prevList = videoCard;
         e.preventDefault();
         if(videoSrc){
             download(videoSrc,`${Date.now()}.mp4`)
-            // var a = document.createElement('a');
-            // a.href = videoSrc;
-            // a && (a.download = 'tiktok.mp4');
-            // a.target="_blank";
-            // a.click();
-            // setTimeout(()=>{
-            //     a && (a = null)
-            // },200)
         }
     }
 })
