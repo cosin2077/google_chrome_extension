@@ -12,13 +12,31 @@ var startTask = () =>{
 // clear old
 chrome.runtime && chrome.runtime.onMessage.addListener(
 function(request, sender, sendResponse) {
-    console.log(request);
-    if(request.length && request.length !== prevList.length){
-        renderList(request)
-        prevList = request;
+    let { allList, nextData } = request;
+    console.log(nextData)
+    if(nextData){
+        let videos = [];
+        try{
+            dataList = nextData.props.pageProps.renderData.dataList;
+            dataList = dataList.filter(data=>data.initialDataSource.some(init=>init.videoList));
+            dataList.forEach(data=>{
+                data.initialDataSource.forEach(init=>{
+                    init.videoList.forEach(vl=>{
+                        videos.push(...vl.itemInfos.video.urls)
+                    })
+                })
+            })
+        }catch(err){
+            console.log(err)
+        }
+        prevList = [...prevList,...videos];
+        prevList = [...new Set(prevList)];
+        console.log(prevList);
+    }else if(allList.length && allList.length !== prevList.length){
+        renderList(allList)
+        prevList = allList;
         bindClickEvent();
-    }
-    if(request.length == 0){
+    }else if(allList.length == 0){
         renderNone()
     }
     sendResponse({
@@ -74,4 +92,3 @@ const download = (url, name) => {
         filename: name || `${Date.now()}.mp4`,
     });
 };
-
