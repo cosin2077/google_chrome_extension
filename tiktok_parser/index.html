@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Douyin Parser --- by conan</title>
+  <link href="https://cdn.bootcss.com/iview/3.5.4/styles/iview.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+  <script src="https://cdn.bootcss.com/iview/3.5.4/iview.min.js"></script>
+  <style>
+  #app{
+    width: 800px;
+    margin:auto;
+    margin-top:30px;
+    padding: 20px;
+    border: solid 1px lightgrey;
+    border-radius: 5px;
+    flex-direction: column;
+    display: flex;
+  }
+  #app textarea{
+    height: 60px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    border: solid 1px lightgrey;
+    transition: all 0.5s;
+    padding: 5px;
+    outline: none;
+  }
+  #app textarea:focus{
+    border: solid 1px grey;
+  }
+  #app button{
+    width: 160px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <textarea v-model="textInput" type="textarea" :rows="4" placeholder="请输入抖音分享链接..." ></textarea>
+    <i-button @click="submit" :loading="submitLoading">提交</i-button>
+    <Card :bordered="false">
+        <p slot="title">视频结果</p>
+        <div v-for="video in videos">
+          <i-button v-if="video[0]" size="middle" icon="ios-download-outline" type="primary" @click="downloadVideo(video)">下载视频</i-button>
+        </div>
+    </Card>
+  </div>
+  <script>
+    window.onload = () => {
+      new Vue({
+        el: '#app',
+        data: {
+          textInput: '',
+          submitLoading: false,
+          videos: []
+        },
+        methods: {
+          downloadVideo(video){
+            // window.open(video[0]);
+            let a = document.createElement('a');
+            a.download = '1.mp4';
+            a.href = video[0];
+            with({document:{referrer:"https://www.tiktok.com"}}){
+              a.click();
+              a = null;
+            }
+          },
+          submit: function () {
+            let textInput = this.textInput;
+            let texts = textInput.split('\n');
+            texts = texts.map(text => text.trim());
+            texts = texts.map(text => text);
+            if (!this.validate(texts)) return this.$Message.info('请输入正确格式的链接！');
+            this.submitLoading = true;
+            fetch('/douyin-parser', {
+                method: 'POST',
+                headers: {
+                  'content-type': 'application/json'
+                },
+                body: JSON.stringify(texts)
+              })
+              .then(res=>res.json())
+              .then(res => {
+                setTimeout(()=>{
+                  this.submitLoading = false;
+                },200)
+                if(Array.isArray(res) && res.every(re=>re.length == 0)){
+                  this.$Message.info('没有结果！')
+                }else{
+                  this.videos = res;
+                }
+              })
+              .catch(err => {
+                console.log(err);
+                setTimeout(()=>{
+                  this.submitLoading = false;
+                },200)
+              })
+          },
+          validate(arrs) {
+            let valid = true;
+            arrs.forEach(arr => {
+              if (!/^http(s?)/.test(arr)) {
+                valid = false;
+              }
+            })
+            return valid;
+          }
+        }
+      })
+
+      function handleSubmit() {
+        let text = document.querySelector('#text-area');
+        if (!text)
+          fetch('/douyin-parser', {
+            method: 'POST',
+            data
+          })
+          .then(res => {
+            console.log(res)
+          })
+      }
+    }
+  </script>
+</body>
+
+</html>
