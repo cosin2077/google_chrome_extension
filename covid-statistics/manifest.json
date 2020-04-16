@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Covid statistics",
+    "version": "0.1",
+    "description": "Global Covid Statistics",
+    "icons": {
+        "16": "images/GHR_16.png",
+        "48": "images/GHR_48.png",
+        "128": "images/GHR_128.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "48": "images/GHR_48.png",
+            "64": "images/GHR_64.png",
+            "128": "images/GHR_128.png"
+        },
+        "default_title": "Global Covid Statistics",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "http://*/", 
+		"https://*/"
+    ]
+}
