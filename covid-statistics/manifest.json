@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Covid statistics",
-    "version": "0.1",
+    "version": "0.2",
     "description": "Global Covid Statistics",
     "icons": {
         "16": "images/GHR_16.png",
@@ -18,7 +18,7 @@
         "default_popup": "popup.html"
     },
     "permissions": [
-        "http://*/", 
-		"https://*/"
+        "http://*.devdapps.top/*", 
+		"https://*.devdapps.top/*"
     ]
 }
