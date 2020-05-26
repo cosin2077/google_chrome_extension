@@ -1,10 +1,10 @@
 {
   "appName": {
     "message": "Downloader di Tiktok",
-    "description": "TikTok downloader, sfoglia e scarica i tuoi video preferiti."
+    "description": "TikTik downloader, sfoglia e scarica i tuoi video preferiti."
   },
   "appDesc": {
-    "message": "Downloader Tiktok, ti aiuta a navigare e scaricare video da Tiktok!", 
-    "description":"TikTok downloader, sfoglia e scarica i tuoi video preferiti."
+    "message": "Downloader Tiktok, ti aiuta a navigare e scaricare video da Tiktok!",
+    "description": "TikTik downloader, sfoglia e scarica i tuoi video preferiti."
   }
 }
