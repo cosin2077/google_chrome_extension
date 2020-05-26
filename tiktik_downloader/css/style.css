@@ -13,26 +13,26 @@ body {
 #title p{
     font-size: 1.3em;
 }
-#title,#tiktok-list{
+#title,#tiktik-list{
     text-align: center;
 }
 
-#tiktok-list{
+#tiktik-list{
     font-size: 2em;
 }
-#tiktok-list ul{
+#tiktik-list ul{
     overflow-y: scroll;
     max-height: 240px;
     list-style: none;
 }
-#tiktok-list ul li{
+#tiktik-list ul li{
     margin: 2px;
     height: 60px;
     line-height: 40px;
     text-decoration: none;
     display: inline-block;
 }
-#tiktok-list ul li a{
+#tiktik-list ul li a{
     text-decoration: none;
     color: black;
     background-color: whitesmoke;
@@ -46,12 +46,12 @@ body {
     margin-bottom: 10px;
     transition: all 0.3s;
 }
-#tiktok-list ul li a:hover{
+#tiktik-list ul li a:hover{
     color: red;
     background-color: lightgrey;
     box-shadow: 6px 6px 5px grey;
 }
-#tiktok-list ul li a:active{
+#tiktik-list ul li a:active{
     color: red;
     background-color: lightgrey;
     box-shadow: 3px 3px 3px grey;
