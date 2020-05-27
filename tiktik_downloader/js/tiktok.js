@@ -5,9 +5,17 @@ var donwloadImgWhite = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKsAAACACA
 var prevList = [];
 var allList = [];
 
+var other = '.video-card.default'
+var trending = '.video-card-one-column.default'
+
+var query = other;
 var startTask = () =>{
-var videoCard = document.querySelectorAll('.video-card.default') || [];
-var videoSrcs = [...document.querySelectorAll('.video-card.default video')] || [];
+var href = location.href;
+if(href.indexOf('trending')!=-1){
+    query = trending;
+}
+var videoCard = document.querySelectorAll(query) || [];
+var videoSrcs = [...document.querySelectorAll(`${query} video`)] || [];
 videoSrcs = videoSrcs.map(video=>video.src);
 allList = [...allList,...videoSrcs];
 allList = [...new Set(allList)];
@@ -40,14 +48,6 @@ prevList = videoCard;
         e.preventDefault();
         if(videoSrc){
             download(videoSrc,`${Date.now()}.mp4`)
-            // var a = document.createElement('a');
-            // a.href = videoSrc;
-            // a && (a.download = 'tiktok.mp4');
-            // a.target="_blank";
-            // a.click();
-            // setTimeout(()=>{
-            //     a && (a = null)
-            // },200)
         }
     }
 })
