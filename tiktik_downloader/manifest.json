@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "version": "1.4",
+    "version": "1.7",
     "name": "__MSG_appName__",
     "description": "__MSG_appDesc__",
     "default_locale":"en",
@@ -17,24 +17,22 @@
         "default_title": "TikTik video downloader",
         "default_popup": "popup.html"
     },
-    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.googletagmanager.com/ https://www.google-analytics.com/; object-src 'self'",
 	"offline_enabled": true,
 	"permissions": [
 		"*://www.tiktok.com/*", 
         "*://tiktok.com/*",
-        "http://*/", 
-		"https://*/",
         "downloads",
         "tabs"
     ],
     "background": {
-        "scripts": [ "background.min.js" ]
+        "scripts": [ "background.js" ]
     },
 	"short_name": "TikTik downloader",
     "content_scripts": [
         {
             "matches": ["*://www.tiktok.com/*","*://tiktok.com/*"],
-            "js": ["js/tiktok.min.js"]
+            "js": ["js/tiktok.js"]
         }
     ]
 }
