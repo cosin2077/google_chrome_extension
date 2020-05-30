@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 580px;;
+    height: 420px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    position: relative;
+    background-color: whitesmoke;
+}
+
+#covid{
+    height: 100%;
+    width: 100%;
+    margin-top: -10px;
+    background-color: whitesmoke;
+}
+#title{
+    text-align: center;
+    padding: 5px;
+}
+#title img{
+    height: 45px;
+    line-height: 45px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    width: 540px;
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid #69c;
+    margin: 20px;
+    cursor: default;
+
+}
+
+table th {
+    font-weight: normal;
+    text-align: center;
+    font-size: 14px;
+    color: #039;
+    border-bottom: 1px dashed #69c;
+    padding: 4px 6px;
+    white-space: nowrap;
+}
+
+table td {
+    color: #669;
+    padding: 4px 12px;
+    white-space: nowrap;
+    text-align: left;
+}
+table td:first-child{
+    max-width: 20px;
+}
+table td:nth-child(2){
+    max-width: 220px;
+}
+table td:nth-child(3){
+    max-width: 50px;
+    text-align: right;
+}
+table td:nth-child(4){
+    max-width: 50px;
+    text-align: right;
+}
+table td:nth-child(5){
+    max-width: 50px;
+    text-align: right;
+}
+table td:nth-child(6){
+    text-align: right;
+}
+table tbody tr:hover td {
+    color: #339;
+    background: #d0dafd;
+}
+#loading {
+    display: flex;
+    height: 100vh;
+    flex: 1;
+    background: whitesmoke;
+  }
+  
+  #loading .spinner {
+      width: 50px;
+      height: 2.5rem;
+      margin: auto;
+  }
+  
+  #loading .spinner>div {
+      display: inline-block;
+      width: 6px;
+      height: 100%;
+      -webkit-animation: 1s ease-in-out infinite sk-stretchdelay;
+      animation: 1s ease-in-out infinite sk-stretchdelay;
+      background-color: #999;
+  }
+  
+  #loading .spinner .rect2 {
+      -webkit-animation-delay: -.9s;
+      animation-delay: -.9s
+  }
+  
+  #loading .spinner .rect3 {
+      -webkit-animation-delay: -.8s;
+      animation-delay: -.8s
+  }
+  
+  #loading .spinner .rect4 {
+      -webkit-animation-delay: -.7s;
+      animation-delay: -.7s
+  }
+  
+  #loading .spinner .rect5 {
+      -webkit-animation-delay: -.6s;
+      animation-delay: -.6s
+  }
+  
+  @-webkit-keyframes sk-stretchdelay {
+      0%,100%,40% {
+          opacity: .5;
+          -webkit-transform: scaleY(.8);
+          transform: scaleY(.8)
+      }
+  
+      20% {
+          opacity: 1;
+          -webkit-transform: scaleY(1);
+          transform: scaleY(1)
+      }
+  }
+  
+  @keyframes sk-stretchdelay {
+      0%,100%,40% {
+          opacity: .5;
+          -webkit-transform: scaleY(.8);
+          transform: scaleY(.8)
+      }
+  
+      20% {
+          opacity: 1;
+          -webkit-transform: scaleY(1);
+          transform: scaleY(1)
+      }
+  }
