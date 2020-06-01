@@ -50,7 +50,7 @@ table tbody tr:hover td {
 header{
     display: none;
     position: fixed;
-    width: 100%;
+    width: 580px;
     text-align: center;
     margin-bottom: -18px;
     font-size: 2em;
