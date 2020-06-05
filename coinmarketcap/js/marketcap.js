@@ -1,6 +1,6 @@
 
 function start(){
-    var url = 'https://api.coinmarketcap.com/v1/ticker/?limit=100';
+    var url = 'https://api.coincap.io/v2/assets';
     var totalCap = 'https://api.coinmarketcap.com/v1/global/';
 
 function httpRequest(url, callback){
@@ -19,9 +19,9 @@ function color(node){
     var colors = [
         '#FF0000',
         '#FF7F00',
-        '#7DFFFF',
-        '#00FF00 ',
-        '#00FFFF',
+        '#8B00FF',
+        '#FF0000 ',
+        '#FF7F00',
         '#0000FF',
         '#8B00FF',
     ]
@@ -48,7 +48,7 @@ function showTotal(result){
 
 function showResults(result){
     result = JSON.parse(result);
-    var list = result;
+    var list = result.data;
     var title = document.getElementById('title');
     color(title);
     title.style.display="block";
@@ -57,16 +57,16 @@ function showResults(result){
     for(var i of list){
         table += '<tr>';
         table += '<td>'+num+'</td>';
-        table += '<td>'+i.name+'</td>';
+        table += '<td>'+i.id+'</td>';
         //price
-        table += '<td style="font-weight:bold">'+'$'+i.price_usd+'</td>';
+        table += '<td style="font-weight:bold">'+'$'+truncNumber(i.priceUsd)+'</td>';
         //marketcap
-        table += '<td>'+'$'+formatCap(i.market_cap_usd)+'</td>';
+        table += '<td>'+'$'+formatCap(i.marketCapUsd)+'</td>';
 
-        if(i.percent_change_24h>0){
-            table += '<td style="color:green;text-align:right">'+i.percent_change_24h+'%'+'</td>';
+        if(i.changePercent24Hr>0){
+            table += '<td style="color:green;text-align:right">'+truncNumber(i.changePercent24Hr)+'%'+'</td>';
         }else{
-            table += '<td style="color:red;text-align:right">'+i.percent_change_24h+'%'+'</td>';
+            table += '<td style="color:red;text-align:right">'+truncNumber(i.changePercent24Hr)+'%'+'</td>';
         }
         
         table += '</tr>';
@@ -75,7 +75,7 @@ function showResults(result){
     
     table += '</table>';
     document.getElementById('marketcap').innerHTML = table;
-    httpRequest(totalCap, showTotal);
+    // httpRequest(totalCap, showTotal);
 }
 
 //can use toLocalString format
@@ -100,6 +100,9 @@ function formatCap(cap){
         }
         return recapArr.reverse().join("");
 }
+function truncNumber(num){
+    return Number(num) && Number(num).toFixed(4)
+}
 
 httpRequest(url, showResults);
 
@@ -107,10 +110,12 @@ httpRequest(url, showResults);
 document.getElementById('marketcap').innerHTML='<div id="loading">'+'Loading'+'</div>';
 var ld = document.getElementById('loading');
 
-var itv = setInterval(function(){
+var itv = setInterval(() =>{
     if(ld.innerHTML.indexOf('...')!=-1){
         ld.innerHTML = 'Loading';
     }else{
         ld.innerHTML+='.';
     }
-}, 500);
+},1000);
+}
+start();
