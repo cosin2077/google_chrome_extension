@@ -4,14 +4,14 @@
     "version": "0.1.9",
     "description": "Provide top 100 cryptocurrency marketcap data",
     "icons": {
-        "16": "images/bitcoin.png",
-        "48": "images/bitcoin.png",
-        "128": "images/bitcoin.png"
+        "16": "images/bitcoin16.png",
+        "48": "images/bitcoin48.png",
+        "128": "images/bitcoin128.png"
     },
     "browser_action": {
         "default_icon": {
-            "19": "images/bitcoin.png",
-            "38": "images/bitcoin.png"
+            "19": "images/bitcoin48.png",
+            "38": "images/bitcoin128.png"
         },
         "default_title": "Cryptocurrency marketcap",
         "default_popup": "popup.html"
