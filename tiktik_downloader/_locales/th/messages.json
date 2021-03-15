@@ -1,10 +1,11 @@
+
 {
   "appName": {
-    "message": "ดาวน์โหลด TikTok",
-    "description": "ดาวน์โหลด TikTok เรียกดูและดาวน์โหลดวิดีโอโปรดของคุณ"
+    "message": "TickTick downloader",
+    "description": "TickTick downloader,help browse and download your favorite videos"
   },
   "appDesc": {
-    "message": "ดาวน์โหลด TikTok ช่วยให้คุณค้นหาและดาวน์โหลดวิดีโอจาก Tiktok!",
-    "description": "ดาวน์โหลด TikTok เรียกดูและดาวน์โหลดวิดีโอโปรดของคุณ"
+    "message": "TickTick downloader,help browse and download your favorite videos.",
+    "description": "Enjoy and download your favorite videos from tiktok.com"
   }
 }
