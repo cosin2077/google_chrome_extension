@@ -56,3 +56,34 @@ body {
     background-color: lightgrey;
     box-shadow: 3px 3px 3px grey;
 }
+.referer{
+    margin-top: 20px;
+    text-align: center;
+}
+.referer img {
+    height: 100px;
+    margin: auto;
+}
+.referer .binance img{
+    width: 100%;
+    height: auto;
+}
+.referer .huobi img{
+    width: 100%;
+    text-align: center;
+}
+.referer .kucoin img{
+    width: 95%;
+    height: auto;
+}
+
+h2.buy{
+    text-align: center;
+    margin: 20px;
+    font-size: 2.2em;
+    font-family: impact;
+    letter-spacing: 1px;
+}
+small{
+    text-align: center;
+}
