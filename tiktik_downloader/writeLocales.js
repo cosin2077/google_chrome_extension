@@ -1,10 +1,10 @@
 const fs = require('fs')
 const path = require('path')
 
-const tplName = 'TickTick downloader'
+const tplName = 'Tick-Tock downloader'
 const tplDesc = 
-`TickTick downloader,help browse and download your favorite videos`
-const dname = `TickTick downloader,help browse and download your favorite videos.`
+`Tick-Tock downloader,help browse and download your favorite videos`
+const dname = `Tick-Tock downloader,help browse and download your favorite videos.`
 const ddesc = `Enjoy and download your favorite videos from tiktok.com`
 
 const msgFile = 'messages.json'
@@ -23,12 +23,12 @@ const template =
 `
 const langMap = {
   zh_CN:{
-    name: 'Image downloader',
-    desc: '最好的图片下载工具！'
+    name: 'Tick-Tock downloader',
+    desc: '最好用的抖/音视频下载工具！'
   },
   zh_TW:{
-    name: 'Image downloader',
-    desc: '最好的图片下载工具！'
+    name: 'Tick-Tock downloader',
+    desc: '最好用的抖/音视频下载工具！'
   },
 }
 

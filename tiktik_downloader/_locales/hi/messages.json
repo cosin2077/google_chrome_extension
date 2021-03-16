@@ -1,11 +1,11 @@
 
 {
   "appName": {
-    "message": "TickTick downloader",
-    "description": "TickTick downloader,help browse and download your favorite videos"
+    "message": "Tick-Tock downloader",
+    "description": "Tick-Tock downloader,help browse and download your favorite videos"
   },
   "appDesc": {
-    "message": "TickTick downloader,help browse and download your favorite videos.",
+    "message": "Tick-Tock downloader,help browse and download your favorite videos.",
     "description": "Enjoy and download your favorite videos from tiktok.com"
   }
 }
