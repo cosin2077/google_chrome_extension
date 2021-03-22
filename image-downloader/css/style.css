@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 580px;
+    height: 320px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    position: relative;
+    border-radius: 5px;
+}
+.app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
