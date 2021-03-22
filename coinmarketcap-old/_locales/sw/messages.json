@@ -1,0 +1,11 @@
+
+{
+  "appName": {
+    "message": "CoinMarketCap",
+    "description": "Cryptocurrency Prices, Charts And Market Capitalizations | CoinMarketCap.Provide top 100 cryptocurrency marketcap data, provide bitcoin, ethereum, ripple, 0x, binance coin data.A cryptocurrency (or crypto currency) is a digital asset designed to work as a medium of exchange wherein individual coin ownership records are stored in a digital ledger or computerized database using strong cryptography to secure transaction record entries, to control the creation of additional digital coin records.CoinMarketCap provide these information."
+  },
+  "appDesc": {
+    "message": "CoinMarketCap",
+    "description": "Cryptocurrency Prices, Charts And Market Capitalizations | CoinMarketCap.Provide top 100 cryptocurrency marketcap data, provide bitcoin, ethereum, ripple, 0x, binance coin data.A cryptocurrency (or crypto currency) is a digital asset designed to work as a medium of exchange wherein individual coin ownership records are stored in a digital ledger or computerized database using strong cryptography to secure transaction record entries, to control the creation of additional digital coin records.CoinMarketCap provide these information."
+  }
+}
