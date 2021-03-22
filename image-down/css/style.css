@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 580px;
+    height: 320px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    position: relative;
+    border-radius: 5px;
+}
+#title p{
+    font-size: 1.3em;
+}
+#title,#tiktik-list{
+    text-align: center;
+}
+
+#tiktik-list{
+    font-size: 2em;
+}
+#tiktik-list ul{
+    overflow-y: scroll;
+    max-height: 240px;
+    list-style: none;
+}
+#tiktik-list ul li{
+    margin: 2px;
+    height: 60px;
+    line-height: 40px;
+    text-decoration: none;
+    display: inline-block;
+}
+#tiktik-list ul li a{
+    text-decoration: none;
+    color: black;
+    background-color: whitesmoke;
+    border: 1px solid lightgrey;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+#tiktik-list ul li a:hover{
+    color: red;
+    background-color: lightgrey;
+    box-shadow: 6px 6px 5px grey;
+}
+#tiktik-list ul li a:active{
+    color: red;
+    background-color: lightgrey;
+    box-shadow: 3px 3px 3px grey;
+}
+.referer{
+    margin-top: 20px;
+    text-align: center;
+}
+.referer img {
+    height: 100px;
+    margin: auto;
+}
+.referer .binance img{
+    width: 100%;
+    height: auto;
+}
+.referer .huobi img{
+    width: 100%;
+    text-align: center;
+}
+.referer .kucoin img{
+    width: 95%;
+    height: auto;
+}
+
+h2.buy{
+    text-align: center;
+    margin: 20px;
+    font-size: 2.2em;
+    font-family: impact;
+    letter-spacing: 1px;
+}
+small{
+    text-align: center;
+}
