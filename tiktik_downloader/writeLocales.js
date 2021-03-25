@@ -1,10 +1,10 @@
 const fs = require('fs')
 const path = require('path')
 
-const tplName = 'Iou-tick downloader'
+const tplName = 'Took downloader'
 const tplDesc = 
-`Iou-tick downloader,help browse and download your favorite videos`
-const dname = `Iou-tick downloader,help browse and download your favorite videos.`
+`Took downloader,help browse and download your favorite videos`
+const dname = `Took downloader,help browse and download your favorite videos.`
 const ddesc = `Enjoy and download your favorite videos from tiktok.com`
 
 const msgFile = 'messages.json'
