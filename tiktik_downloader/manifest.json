@@ -1,6 +1,6 @@
 {
     "manifest_version": 2,
-    "version": "1.9.1",
+    "version": "1.9.2",
     "name": "__MSG_appName__",
     "description": "__MSG_appDesc__",
     "default_locale":"en",
@@ -14,7 +14,7 @@
             "19": "images/logo.png",
             "38": "images/logo.png"
         },
-        "default_title": "TikTik video downloader",
+        "default_title": "Took video downloader",
         "default_popup": "popup.html"
     },
     "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.googletagmanager.com/ https://www.google-analytics.com/; object-src 'self'",
@@ -27,7 +27,7 @@
     "background": {
         "scripts": [ "background.js" ]
     },
-	"short_name": "TikTik downloader",
+	"short_name": "Took downloader",
     "content_scripts": [
         {
             "matches": ["*://www.tiktok.com/*","*://tiktok.com/*"],
