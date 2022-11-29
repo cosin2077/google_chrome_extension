@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 580px;
+    height: 520px;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    position: relative;
+    overflow: auto;
+    transform: translateZ(0);
+    -webkit-overflow-scrolling: touch;
+}
+
+#title {
+    font-size: 1.15em;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    color: #0f0c0cc4;
+    text-align: center;
+    margin: 5px;
+}
+
+#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#marketcap {
+    font-size: 14px;
+    padding: 5px;
+    max-height: 450px;
+    .render-list {
+        .header,
+        .item {
+            border-bottom: solid 1px lightgrey;
+            border-left: solid 1px lightgrey;
+            border-right: solid 1px lightgrey;
+            padding: 0 5px;
+            height: 30px;
+            line-height: 30px;
+
+            span {
+                display: inline-block;
+                text-align: left;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+
+        .header:first-child {
+            border-top: solid 1px lightgrey;
+        }
+
+        .header span {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .item,
+        .header {
+            .rank {
+                width: 40px;
+            }
+
+            .name {
+                min-width: 175px;
+            }
+
+            .price {
+                min-width: 100px;
+            }
+
+            .market-cap {
+                min-width: 140px;
+            }
+
+            .change {
+                width: 60px;
+                text-align: right;
+
+                &.minus {
+                    color: red;
+
+                    &::before {
+                        content: '-';
+                        // position: absolute;
+                        // top: 0px;
+                        // left: -7px;
+                    }
+                }
+
+                &.plus {
+                    color: green;
+
+                    &::before {
+                        content: '+';
+                        // position: absolute;
+                        // top: 0px;
+                        // left: -7px;
+                    }
+                }
+            }
+        }
+    }
+}
