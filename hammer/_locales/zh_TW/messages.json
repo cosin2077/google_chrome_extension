@@ -1,0 +1,11 @@
+
+{
+  "appName": {
+    "message": "hammer",
+    "description": "最好用谷歌扩展工具！"
+  },
+  "appDesc": {
+    "message": "$dname",
+    "description": "$ddesc"
+  }
+}
